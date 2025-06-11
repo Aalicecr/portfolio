@@ -66,17 +66,50 @@ body::before {
     opacity: 0.8;
 }
 
+.arrow-image-container {
+    margin-top: -130px;
+    width: 50%;
+    justify-content: flex-start; /* Allinea a sinistra */
+    align-items: center;
+    box-sizing: border-box;
+    }
+
+.arrow-image {
+    width: 30px;
+    height: 100px;
+    display: block;
+    animation: bounce-image 2s infinite;
+    margin-left: 0; /* Sicuro che sia completamente a sinistra */
+}
+
+
+/* Animazione di "rimbalzo" per l'immagine */
+@keyframes bounce-image {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0); /* Posizione normale */
+    }
+    40% {
+        transform: translateY(-15px); /* Si muove verso l'alto */
+    }
+    60% {
+        transform: translateY(-8px); /* Ritorna un po' giù */
+    }
+}
+
+
+
+
 .btn-portfolio {
     display: inline-block; /* Permette di dare larghezza, altezza e margini */
-    background-color: #007bff; /* Un colore blu vivace per lo sfondo del bottone */
+    background-color: #045bb9; /* Un colore blu vivace per lo sfondo del bottone */
     color: white; /* Il testo del bottone sarà bianco */
     padding: 10px 20px; /* Spazio interno al bottone (verticale orizzontale) */
     text-decoration: none; /* Rimuove la sottolineatura tipica dei link */
     border-radius: 5px; /* Bordi leggermente arrotondati */
-    margin-top: 20px; /* Spazio sopra il bottone per separarlo dal testo */
+    margin-top: 50px; /* Spazio sopra il bottone per separarlo dal testo */
     transition: background-color 0.3s ease; /* Transizione fluida al passaggio del mouse */
 }
 
 .btn-portfolio:hover {
-    background-color: #0056b3; /* Un blu più scuro quando il mouse passa sopra */
+    background-color: #013874; /* Un blu più scuro quando il mouse passa sopra */
 }
