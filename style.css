@@ -65,3 +65,18 @@ body::before {
     color: white;
     opacity: 0.8;
 }
+
+.btn-portfolio {
+    display: inline-block; /* Permette di dare larghezza, altezza e margini */
+    background-color: #007bff; /* Un colore blu vivace per lo sfondo del bottone */
+    color: white; /* Il testo del bottone sarà bianco */
+    padding: 10px 20px; /* Spazio interno al bottone (verticale orizzontale) */
+    text-decoration: none; /* Rimuove la sottolineatura tipica dei link */
+    border-radius: 5px; /* Bordi leggermente arrotondati */
+    margin-top: 20px; /* Spazio sopra il bottone per separarlo dal testo */
+    transition: background-color 0.3s ease; /* Transizione fluida al passaggio del mouse */
+}
+
+.btn-portfolio:hover {
+    background-color: #0056b3; /* Un blu più scuro quando il mouse passa sopra */
+}
