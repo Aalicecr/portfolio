@@ -41,6 +41,7 @@ body::before {
     box-sizing: border-box;
     position: relative;
     z-index: 10;
+    
 }
 
 .navbar .nav-left {
@@ -67,7 +68,7 @@ body::before {
 }
 
 .arrow-image-container {
-    margin-top: -130px;
+    margin-top: -100px;
     width: 50%;
     justify-content: flex-start; /* Allinea a sinistra */
     align-items: center;
@@ -76,10 +77,12 @@ body::before {
 
 .arrow-image {
     width: 30px;
-    height: 100px;
+    height: 60px;
+   opacity: 0.9;
     display: block;
     animation: bounce-image 2s infinite;
-    margin-left: 0; /* Sicuro che sia completamente a sinistra */
+    margin-left: 0; 
+    opacity: 0.8;
 }
 
 
@@ -101,15 +104,20 @@ body::before {
 
 .btn-portfolio {
     display: inline-block; /* Permette di dare larghezza, altezza e margini */
-    background-color: #045bb9; /* Un colore blu vivace per lo sfondo del bottone */
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    background-color: #01366f; /* Un colore blu vivace per lo sfondo del bottone */
     color: white; /* Il testo del bottone sarà bianco */
     padding: 10px 20px; /* Spazio interno al bottone (verticale orizzontale) */
     text-decoration: none; /* Rimuove la sottolineatura tipica dei link */
     border-radius: 5px; /* Bordi leggermente arrotondati */
-    margin-top: 50px; /* Spazio sopra il bottone per separarlo dal testo */
+    margin-top: 8px; /* Spazio sopra il bottone per separarlo dal testo */
     transition: background-color 0.3s ease; /* Transizione fluida al passaggio del mouse */
+     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .btn-portfolio:hover {
-    background-color: #013874; /* Un blu più scuro quando il mouse passa sopra */
+    background-color: #c52184; /* Un blu più scuro quando il mouse passa sopra */
+    transform: scale(1.10); /* leggero ingrandimento */
 }
