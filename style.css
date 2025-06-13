@@ -233,10 +233,25 @@ body.portfolio::before {
     opacity: 0.8;
     font-family: Impact, sans-serif;
     text-align: left; 
-    margin-top: -10px
+    margin-top: -10px;
   
     
 }
 
+.arrow-image-container-portfolio {
+    margin-top: 30px;
+    width: 50%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
 
+.arrow-image-container-portfolio .arrow-image-portfolio {
+    width: 30px;
+    height: 60px;
+    opacity: 0.8;
+    display: block;
+    animation: bounce-image 2s infinite;
+}
 
