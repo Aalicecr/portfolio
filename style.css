@@ -157,19 +157,55 @@ body.portfolio::before {
 
 .portfolio-content {
     max-width: 800px;
-    margin: 150px 0 0 20px; 
-    padding: 0 20px; /
-    text-align: left; 
-    
+    margin: 150px 0 0 20px;
+    padding: 0 20px;
+    text-align: left;
+
     color: white;
     z-index: 2;
-    position: relative;
+    position: relative; /* CRUCIALE: Rende questo il contenitore di riferimento per l'immagine */
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
 }
+
+.floating-image {
+    position: absolute;
+    width: 220px;
+    height: auto;
+    z-index: -1; 
+    
+    top: -50px !important; 
+    left: 70%; 
+
+    animation: floatAnimation 10s ease-in-out infinite alternate;
+}
+
+@keyframes floatAnimation {
+    0% {
+        transform: translate(0, 0); /* Posizione iniziale */
+    }
+    25% {
+        transform: translate(10px, 30px); /* Si sposta leggermente */
+    }
+    50% {
+        transform: translate(-10px, 80px); /* Altra posizione */
+    }
+    75% {
+        transform: translate(30px, -20px); /* Ancora un'altra */
+    }
+    100% {
+        transform: translate(0, 0); /* Torna alla posizione iniziale */
+    }
+}
+
 
 .portfolio-title {
   font-size: 25px;
     font-weight: 100;
-    margin-bottom: -35px;
+    margin-bottom: -30px;
     font-family: 'Impact', sans-serif;
     opacity: 0.8;
     text-align: left; 
@@ -181,10 +217,11 @@ body.portfolio::before {
     font-weight: 600;
     letter-spacing: 5px;
     margin-bottom: 10px;
+    
     font-family: 'Impact', sans-serif;
     opacity: 0.8;
     text-align: left;
-    margin-top: -10px;
+    margin-top: -15px;
     margin-left: 0; /* Aggiungi questa riga per essere esplicito */
     padding-left: 0; /* Aggiungi questa riga per essere esplicito */
 }
