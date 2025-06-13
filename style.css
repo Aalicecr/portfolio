@@ -38,7 +38,7 @@ body.portfolio::before {
         135deg,
         #000000 0%,
         #ca08a0 25%,
-        #09c63e 50%,
+        #ad09c6 50%,
         #000000 75%,
         #470aa9 100%
     );
@@ -137,11 +137,11 @@ body.portfolio::before {
 
 /* BOTTONE TORNA INDIETRO */
 .back-button {
-    position: absolute;
+    position: fixed;
     top: 20px;
     left: 30px;
     font-size: 16px;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(4, 10, 95, 0.6);
     color: white;
     padding: 10px 15px;
     text-decoration: none;
@@ -152,7 +152,48 @@ body.portfolio::before {
 
 .back-button:hover {
     transform: scale(1.05);
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(9, 181, 46, 0.8);
+}
+
+.portfolio-content {
+    max-width: 800px;
+    margin: 150px 0 0 20px; 
+    padding: 0 20px; /
+    text-align: left; 
+    
+    color: white;
+    z-index: 2;
+    position: relative;
+}
+
+.portfolio-title {
+    font-size: 24px;
+    font-weight: 100;
+    margin-bottom: -25px;
+    font-family: 'Impact', sans-serif;
+    opacity: 0.8;
+    text-align: left; 
+    padding-left: 10px;
+}
+
+.portfolio-subtitle {
+    font-size: 150px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-family: 'Arial', sans-serif;
+    opacity: 0.8;
+    text-align: left;
+    margin-top: -10px;
+    margin-left: 0; /* Aggiungi questa riga per essere esplicito */
+    padding-left: 0; /* Aggiungi questa riga per essere esplicito */
+}
+
+.portfolio-text {
+    font-size: 18px;
+    line-height: 1.8;
+    opacity: 0.9;
+    font-family: 'Arial', sans-serif;
+    text-align: left; /* Assicurati che anche il testo sia allineato a sinistra */
 }
 
 
