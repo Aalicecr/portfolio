@@ -141,8 +141,8 @@ body.portfolio::before {
 
 /* BOTTONE TORNA INDIETRO */
 .back-button {
-    position: fixed;
-    top: 20px;
+    position: relative;
+    top: 40px;
     left: 30px;
     font-size: 16px;
     background-color: rgba(4, 10, 95, 0.6);
@@ -156,7 +156,7 @@ body.portfolio::before {
 
 .back-button:hover {
     transform: scale(1.05);
-    background-color: rgba(9, 181, 46, 0.8);
+    background-color: rgba(245, 15, 122, 0.8);
 }
 
 .portfolio-content {
