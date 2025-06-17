@@ -4,6 +4,7 @@ body {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     min-height: 100vh;
     position: relative;
+    
 }
 
 /* SFONDO DIVERSO per home e portfolio */
@@ -45,7 +46,10 @@ body.portfolio::before {
     background-size: 400% 400%;
     animation: liquidBackground 25s ease infinite alternate;
     z-index: -1;
+   
 }
+
+
 
 @keyframes liquidBackground {
     0% { background-position: 0% 0%; }
@@ -188,13 +192,13 @@ body.portfolio::before {
         transform: translate(0, 0); /* Posizione iniziale */
     }
     25% {
-        transform: translate(10px, 30px); /* Si sposta leggermente */
+        transform: translate(10px, 50px); /* Si sposta leggermente */
     }
     50% {
         transform: translate(-10px, 80px); /* Altra posizione */
     }
     75% {
-        transform: translate(30px, -20px); /* Ancora un'altra */
+        transform: translate(40px, -20px); /* Ancora un'altra */
     }
     100% {
         transform: translate(0, 0); /* Torna alla posizione iniziale */
@@ -337,3 +341,54 @@ body.portfolio::before {
   transform: scale(1.08); 
 }
 
+
+
+
+
+.footer-contact {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+  background-color: rgba(0, 0, 0, 0.3); /* meno opaco */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Impact, sans-serif;
+  font-size: 14px; /* più piccolo */
+  padding: 0 20px;
+  box-sizing: border-box;
+  margin: 0;
+  margin-top: 50px;
+  z-index: 9999;
+  overflow-x: hidden;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.footer-content h4 {
+  font-size: 22px;
+    font-weight: 500;
+  margin: 0;
+  letter-spacing: 1px;
+  opacity: 1;
+}
+
+.footer-content a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 400;
+  
+  opacity: 1;
+}
+
+.footer-content a:hover {
+  color: #c52184;
+}
