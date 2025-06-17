@@ -243,13 +243,13 @@ body.portfolio::before {
   justify-content: center; /* centro orizzontale */
   align-items: center;     /* centro verticale */
   gap: 20px;               /* spazio tra testo e freccia */
-  width: 150%;             /* occupa tutta la larghezza */
+  width: 160%;             /* occupa tutta la larghezza */
   margin-top: 50px;
   box-sizing: border-box;  /* evita padding/margin influiscano */
 }
 
 .portfolio-subtitle-2 {
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 100;
   color: #ffffff;
   margin: 0;               /* elimina margini predefiniti */
@@ -258,8 +258,8 @@ body.portfolio::before {
 }
 
 .arrow-image-portfolio {
-  width: 35px;
-  height: 55px;
+  width: 30px;
+  height: 45px;
   opacity: 0.8;
   animation: bounce-image 2s infinite;
   
