@@ -227,8 +227,8 @@ body.portfolio::before {
 }
 
 .portfolio-text {
-    font-size: 18px;
-   font-weight: 200;
+    font-size: 17px;
+   font-weight: 50;
     line-height: 1.3;
     opacity: 0.8;
     font-family: Impact, sans-serif;
@@ -251,6 +251,7 @@ body.portfolio::before {
 .portfolio-subtitle-2 {
   font-size: 40px;
   font-weight: 100;
+  margin-top: 10px;
   color: #ffffff;
   margin: 0;               /* elimina margini predefiniti */
   text-align: center;
@@ -293,6 +294,19 @@ body.portfolio::before {
   border-radius: 5px;
 }
 
+
+.portfolio-subtitle-2 {
+  text-align: left;          
+  width: 90vw;               /* stessa larghezza della griglia */
+  max-width: 1400px;        
+  margin: 40px auto 20px;    
+  padding-left: 40px;        /* spostalo leggermente a destra per allinearsi con i contenuti */
+  font-size: 30px;
+  color: white;
+  font-family: Impact, sans-serif;
+  opacity: 0.8;
+  box-sizing: border-box;    /* assicurati che padding non aumenti larghezza */
+}
 
 
 
