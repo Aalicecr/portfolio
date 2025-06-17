@@ -266,26 +266,28 @@ body.portfolio::before {
 }
 
 .grid-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, auto);
-  gap: 20px;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* CAMBIATO: Altezza fissa per ogni riga, ad esempio 250px */
+    grid-template-rows: repeat(3, 300px); 
+    gap: 50px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .grid-item img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 8px;
-  object-fit: cover;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
-  transition: transform 0.3s ease;
+    width: 100%;
+    /* AGGIUNTO: L'immagine deve coprire l'intera area del suo contenitore (grid-item) */
+    height: 100%; /* L'immagine prenderà l'altezza del grid-item */
+    object-fit: cover; /* ESSENZIALE: Assicura che l'immagine copra l'area senza deformarsi, tagliando se necessario */
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease;
 }
 
 .grid-item img:hover {
-  transform: scale(2.00);
-  cursor: pointer;
+    transform: scale(1.5); 
+    cursor: pointer;
 }
