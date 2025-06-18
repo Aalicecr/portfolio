@@ -501,19 +501,7 @@ body.portfolio::before {
     }
 }
 
-Ottimo che ti piaccia il layout generale! Capisco il problema con le frecce: è facile che si perdano o si posizionino male quando il layout si ridimensiona.
 
-Ho rivisto il CSS per le frecce (.arrow-image e .arrow-image-portfolio) e i loro contenitori per assicurarmi che siano visibili e ben posizionate su tutti i dispositivi, in particolare su quelli più piccoli.
-
-Ecco le modifiche specifiche che ho apportato e che devi sostituire nel tuo style.css:
-
-Modifiche da Applicare al tuo style.css
-Ho modificato la gestione delle frecce in queste sezioni:
-
-Sezione "BASE" (per Desktop): Ho ripristinato le posizioni e le larghezze originali per la freccia nella home page.
-Media Query per Tablet (max-width: 1024px): Ho regolato la posizione e le dimensioni per i tablet.
-Media Query per Smartphone (max-width: 767px): Qui ho fatto i cambiamenti più significativi, assicurandomi che la freccia della home page sia centrata sotto il testo e quella della pagina portfolio sia allineata correttamente con il titolo "I MIEI LAVORI".
-Ecco il codice completo del tuo style.css con queste correzioni. Ti consiglio di copiare e incollare l'intero contenuto, sovrascrivendo il file esistente.
 
 CSS
 
@@ -894,4 +882,282 @@ body.portfolio::before {
 
 .footer-content a:hover {
     color: #c52184;
+}
+
+
+
+
+## Media Queries per la Responsività
+
+```css
+/* --- STILI PER TABLET E SCHERMI FINO A 1024px --- */
+@media (max-width: 1024px) {
+    /* Navbar e Home Page */
+    .navbar {
+        padding: 20px 30px;
+    }
+
+    .logo-text {
+        font-size: 14px;
+        margin-bottom: -50px;
+    }
+
+    .tagline {
+        font-size: 100px;
+    }
+
+    .arrow-image-container {
+        margin-top: -70px;
+        width: auto;
+    }
+
+    .arrow-image {
+        width: 28px;
+        height: 55px;
+    }
+
+    .btn-portfolio {
+        font-size: 15px;
+        padding: 9px 18px;
+        margin-top: 35px;
+    }
+
+    /* Portfolio Page */
+    .back-button {
+        top: 30px;
+        left: 25px;
+        font-size: 15px;
+        padding: 8px 12px;
+    }
+
+    .portfolio-content {
+        margin: 120px 0 0 40px;
+        max-width: 700px;
+        padding: 0 30px;
+    }
+
+    .portfolio-title {
+        font-size: 22px;
+        margin-bottom: -25px;
+    }
+
+    .portfolio-subtitle {
+        font-size: 120px;
+        letter-spacing: 3px;
+        margin-top: -10px;
+    }
+
+    .portfolio-text {
+        font-size: 16px;
+    }
+
+    .floating-image {
+        width: 180px;
+        top: -30px !important;
+        left: 60%;
+    }
+
+    .portfolio-work-header {
+        width: auto;
+        gap: 15px;
+        margin-top: 40px;
+        padding: 0 30px;
+        box-sizing: border-box;
+    }
+
+    .portfolio-subtitle-2 {
+        font-size: 35px;
+        margin: 30px auto 15px;
+        padding-left: 30px;
+        max-width: 90vw;
+    }
+
+    /* Griglie di Immagini e Video - Tablet specific */
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* Due colonne per tablet */
+        gap: 30px;
+        padding: 30px;
+        width: 90vw;
+    }
+
+    .video-grid {
+        grid-template-columns: repeat(1, 1fr); /* Una colonna per i video su tablet */
+        gap: 30px;
+        padding: 30px;
+        width: 90vw;
+    }
+
+    /* Footer */
+    .footer-contact {
+        height: auto;
+        padding: 18px 15px;
+        margin-top: 40px;
+    }
+
+    .footer-content {
+        gap: 10px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .footer-content h4 {
+        font-size: 20px;
+        margin-bottom: 5px;
+        width: 100%;
+    }
+
+    .footer-content a {
+        font-size: 17px;
+    }
+}
+
+/* --- STILI PER SMARTPHONE (FINO A 767px) --- */
+@media (max-width: 767px) {
+    /* Navbar e Home Page */
+    .navbar {
+        flex-direction: column;
+        align-items: center; /* Centra gli elementi della navbar per mobile */
+        padding: 20px 20px;
+    }
+
+    .nav-left {
+        width: 100%;
+        align-items: center; /* Centra il logo e il tagline */
+    }
+
+    .logo-text {
+        font-size: 12px;
+        margin-bottom: -30px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .tagline {
+        font-size: 60px;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .arrow-image-container {
+        margin-top: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .arrow-image {
+        width: 25px;
+        height: 45px;
+    }
+
+    .btn-portfolio {
+        font-size: 14px;
+        padding: 8px 15px;
+        margin-top: 20px;
+        align-self: center;
+    }
+
+    /* Portfolio Page */
+    .back-button {
+        position: fixed; /* Reso fisso per essere sempre visibile */
+        top: 20px;
+        left: 15px;
+        font-size: 14px;
+        padding: 7px 10px;
+        z-index: 100; /* Assicura che sia sopra tutto */
+    }
+
+    .portfolio-content {
+        margin: 80px 0 0 0; /* Rimuovi margin-left fisso, usa auto per centrare o padding */
+        padding: 0 15px;
+        max-width: 100%;
+        align-items: center;
+        text-align: center; /* Centra il testo all'interno di portfolio-content */
+    }
+
+    .portfolio-title {
+        font-size: 18px;
+        margin-bottom: -15px;
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .portfolio-subtitle {
+        font-size: 70px;
+        letter-spacing: 2px;
+        margin-top: -5px;
+        text-align: center;
+    }
+
+    .portfolio-text {
+        font-size: 15px;
+        line-height: 1.4;
+        text-align: center;
+    }
+
+    .floating-image {
+        display: none; /* Nascondi l'immagine flottante su mobile */
+    }
+
+    .portfolio-work-header {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 30px;
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .portfolio-subtitle-2 {
+        font-size: 28px;
+        margin: 20px auto 10px;
+        padding-left: 0;
+        text-align: center;
+        width: 100%;
+        max-width: none;
+    }
+
+    .arrow-image-portfolio {
+        margin-right: 0;
+        margin-top: 0;
+        width: 20px;
+        height: 35px;
+    }
+
+    /* GRIGLIE A COLONNA SINGOLA PER SMARTPHONE */
+    .grid-container,
+    .video-grid {
+        grid-template-columns: repeat(1, 1fr); /* Una colonna singola per entrambe le griglie */
+        gap: 20px;
+        padding: 20px;
+        width: calc(100% - 40px); /* Regola la larghezza per il padding laterale */
+        margin: 0 auto; /* Centra la griglia */
+    }
+
+    .video-grid .video-item {
+        height: 200px;
+    }
+
+    /* Footer */
+    .footer-contact {
+        padding: 15px;
+        margin-top: 30px;
+        height: auto; /* L'altezza si adatta al contenuto */
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .footer-content h4 {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .footer-content a {
+        font-size: 16px;
+        text-align: center;
+    }
 }
