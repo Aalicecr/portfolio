@@ -1192,6 +1192,9 @@ body.portfolio::before {
   .video-grid .video-item {
     height: auto;
   }
+  .video-grid {
+  margin-bottom: 30px; /* spazio extra solo sotto i video */
+}
 
   /* Footer */
   .footer-contact {
