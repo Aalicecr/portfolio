@@ -897,39 +897,42 @@ body.portfolio::before {
 
 /* --- STILI PER SMARTPHONE (FINO A 767px) --- */
 @media (max-width: 767px) {
-    /* Navbar e Home Page */
+    
+    
+ /* Navbar e Home Page */
+ 
     .navbar {
-        flex-direction: column;
-        align-items: center; /* Centra gli elementi della navbar per mobile */
-        padding: 20px 20px;
-    }
+    flex-direction: column;
+    align-items: center; /* Centra gli elementi della navbar per mobile */
+    padding: 20px 20px;
+}
 
-    .nav-left {
-        width: 100%;
-        align-items: center; /* Centra il logo e il tagline */
-    }
+.nav-left {
+    width: 100%;
+    align-items: center; /* Centra il logo e il tagline */
+}
 
-    .logo-text {
-        font-size: 12px;
-        margin-bottom: -30px;
-        text-align: center;
-        width: 100%;
-    }
+.logo-text {
+    font-size: 12px;
+    margin-bottom: -30px;
+    text-align: center;
+    width: 100%;
+}
 
-    .tagline {
-        font-size: 60px;
-        text-align: center;
-        width: 100%;
-        margin-bottom: 20px;
-    }
+.tagline {
+    font-size: 60px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
 
-    .arrow-image-container {
-        margin-top: 0;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        margin-top: 20px;
-    }
+.arrow-image-container {
+    margin-top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
 
     .arrow-image {
         width: 25px;
