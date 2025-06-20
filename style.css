@@ -943,23 +943,31 @@ body.portfolio::before {
         align-self: center;
     }
 
-    /* Portfolio Page */
-    .back-button {
-        position: fixed; /* Reso fisso per essere sempre visibile */
-        top: 20px;
-        left: 15px;
-        font-size: 14px;
-        padding: 7px 10px;
-        z-index: 100; /* Assicura che sia sopra tutto */
-    }
+.back-button {
+  position: absolute; 
+  top: -40px;
+  left: 15px;
+  font-size: 14px;
+  padding: 7px 10px;
+  background-color: rgba(4, 10, 95, 0.7);
+  color: white;
+  border-radius: 5px;
+  z-index: 10;
+}
+
+
+
 
     .portfolio-content {
+        top: 40px;
         margin: 80px 0 0 0; /* Rimuovi margin-left fisso, usa auto per centrare o padding */
         padding: 0 15px;
         max-width: 100%;
         align-items: center;
         text-align: center; /* Centra il testo all'interno di portfolio-content */
     }
+
+    
 
     .portfolio-title {
         font-size: 18px;
@@ -979,6 +987,10 @@ body.portfolio::before {
         font-size: 15px;
         line-height: 1.4;
         text-align: center;
+    }
+
+     .portfolio-text br {
+        display: none;
     }
 
     .floating-image {
@@ -1023,28 +1035,42 @@ body.portfolio::before {
         height: 200px;
     }
 
-    /* Footer */
-    .footer-contact {
-        padding: 15px;
-        margin-top: 30px;
-        height: auto; /* L'altezza si adatta al contenuto */
-    }
-
-    .footer-content {
-        flex-direction: column;
-        gap: 8px;
-    }
-
-    .footer-content h4 {
-        font-size: 18px;
-        text-align: center;
-    }
-
-    .footer-content a {
-        font-size: 16px;
-        text-align: center;
-    }
+    .video-grid {
+  margin-bottom: 60px; /* spazio extra solo sotto i video */
 }
+    .footer-contact {
+    padding: 8px 10px; /* meno padding verticale e orizzontale */
+    margin-top: 15px;
+    height: auto;
+    display: flex;
+    justify-content: center; /* centra orizzontalmente */
+    align-items: center;     /* centra verticalmente */
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    align-items: center; /* centra il contenuto interno */
+    text-align: center;  /* assicura che il testo sia centrato */
+}
+
+.footer-content h4 {
+    position: relative;
+    top: 8px;
+    font-size: 16px;
+    margin: 0;
+}
+
+.footer-content a {
+    font-size: 13px;
+    text-align: center;
+}
+
+}
+
+
+/* --- STILI PER TABLET (768px - 1024px) --- */
 @media (min-width: 768px) and (max-width: 1024px) {
     /* Navbar e Home Page */
     .navbar {
@@ -1181,4 +1207,3 @@ body.portfolio::before {
         font-size: 17px;
     }
 }
-
