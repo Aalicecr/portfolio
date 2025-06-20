@@ -1193,7 +1193,7 @@ body.portfolio::before {
     height: auto;
   }
   .video-grid {
-  margin-bottom: 30px; /* spazio extra solo sotto i video */
+  margin-bottom: 20px; /* spazio extra solo sotto i video */
 }
 
   /* Footer */
